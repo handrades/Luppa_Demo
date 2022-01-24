@@ -1,0 +1,18 @@
+# my global config
+global:
+  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 11s
+    scrape_timeout: 10s
+
+    static_configs:
+    - targets: ['host.docker.internal:%%prometheus_port_1%%']
+
+  - job_name: 'pwsh_ping'
+    scrape_interval: 15s
+    scrape_timeout: 10s
+
+    static_configs:
+    - targets: ['host.docker.internal:%%pwsh_port_1%%']

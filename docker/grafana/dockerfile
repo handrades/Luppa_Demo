@@ -1,0 +1,2 @@
+FROM grafana/grafana:latest
+COPY ./data/grafana.db /var/lib/grafana/grafana.db

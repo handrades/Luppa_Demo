@@ -1,0 +1,4 @@
+FROM ironmansoftware/universal:latest
+RUN pwsh -c "Install-Module PSExporter -Force"
+COPY ./config/AllConfig.psd1 /home/Universal/.config/
+COPY ./docker/%%environment%%/pwsh/data/endpoints.ps1 /root/.PowerShellUniversal/Repository/.universal/endpoints.ps1

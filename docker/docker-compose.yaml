@@ -1,0 +1,55 @@
+version: '3'
+services:
+  luppa_db:
+    build: ./prometheus
+    ports:
+      - "%%prometheus_port_1%%"
+    restart: unless-stopped
+  luppa_visual:
+    build: ./grafana
+    ports:
+      - "%%grafana_port_1%%"
+    links:
+      - "luppa_db:luppa_db"
+      - "luppa_influxdb:luppa_influxdb"
+    user: "0"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: "miContrasenia 123"
+      GF_INSTALL_PLUGINS: "briangann-gauge-panel 0.0.6,grafana-clock-panel 1.1.2, agenty-flowcharting-panel 0.9.1, grafana-worldmap-panel 0.3.3"
+    restart: unless-stopped
+  luppa_pwsh:
+    build:
+      context: ../../
+      dockerfile: ./docker/%%environment%%/pwsh/dockerfile
+    ports:
+      - "%%pwsh_port_1%%"
+    links:
+      - "luppa_db:luppa_db"
+    restart: unless-stopped
+  luppa_nodered:
+    build: ./node-red
+    ports:
+      - "%%nodered_port_1%%"
+    links:
+      - "luppa_influxdb:luppa_influxdb"
+    volumes:
+      # - ./node-red/data/.config.runtime.json:/data/.config.runtime.json
+      # - ./node-red/data/flows_cred.json:/data/flows_cred.json
+      # - ./node-red/data/flows.json:/data/flows.json
+      - ./node-red/data:/data
+    restart: unless-stopped
+  luppa_influxdb:
+    build: ./influxdb
+    ports:
+      - "%%influxdb_port_1%%"
+    volumes:
+      - ./influxdb/data/config.yml:/etc/influxdb2/config.yml
+      - ./influxdb/influxdb2:/var/lib/influxdb2
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=hektop
+      - DOCKER_INFLUXDB_INIT_PASSWORD=miContrasenia 123
+      - DOCKER_INFLUXDB_INIT_ORG=luppa
+      - DOCKER_INFLUXDB_INIT_BUCKET=demo
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=SWwBOYw2xwXUeLZ3g28mxJHooK3lbX97IfimC-bpr8Gjlr-EH1glSxlW4o2sXPRKTZil9HQnc0K3lGpIG20WMA==
+    restart: unless-stopped

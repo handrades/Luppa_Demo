@@ -1,0 +1,283 @@
+[
+    {
+        "id": "aacefaff3199a845",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5fa771957ee43c7c",
+        "type": "eth-ip endpoint",
+        "address": "10.107.201.11",
+        "slot": "0",
+        "cycletime": "500",
+        "name": "Cell1_Connector",
+        "vartable": {
+            "": {
+                "sel": {
+                    "type": "DINT"
+                }
+            }
+        }
+    },
+    {
+        "id": "ef97453886e2bb69",
+        "type": "influxdb",
+        "hostname": "luppa_influxdb",
+        "port": "%%influxdb_port_1%%",
+        "protocol": "http",
+        "database": "database",
+        "name": "influxdb_container",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://host.docker.internal:%%influxdb_port_1%%",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "da81d030bcd2bc56",
+        "type": "eth-ip endpoint",
+        "address": "10.107.222.11",
+        "slot": "0",
+        "cycletime": "500",
+        "name": "Cell22_Connector",
+        "vartable": {
+            "": {
+                "SET_WORK_ORDER_QTY_2XP": {
+                    "type": "DINT"
+                },
+                "SUMA_MODELO_2XP_XS_UNDERBODY": {
+                    "type": "DINT"
+                },
+                "SET_WORK_ORDER_QTY_FIT": {
+                    "type": "DINT"
+                },
+                "SUMA_MODELO_FIT": {
+                    "type": "DINT"
+                },
+                "SUMA_MODELO_CX3": {
+                    "type": "DINT"
+                },
+                "WORK_ORDER_QTY_CX3": {
+                    "type": "DINT"
+                },
+                "SET_WORK_ORDER_QTY_INFINITI_QX50_19": {
+                    "type": "DINT"
+                },
+                "SUMA_MODELO_INFINITI_QX50_19": {
+                    "type": "DINT"
+                },
+                "SET_WORK_ORDER_QTY_MAZDA3_BDTS": {
+                    "type": "DINT"
+                },
+                "SUMA_MODELO_MAZDA3_BDTS": {
+                    "type": "DINT"
+                },
+                "FIT_State": {
+                    "type": "DINT"
+                },
+                "Under2xp_State": {
+                    "type": "DINT"
+                },
+                "CX3_State": {
+                    "type": "DINT"
+                },
+                "InfinityQx50_State": {
+                    "type": "DINT"
+                },
+                "Mazda3_BDTS_State": {
+                    "type": "DINT"
+                }
+            }
+        }
+    },
+    {
+        "id": "ee8426cbef7da6e7",
+        "type": "eth-ip endpoint",
+        "address": "10.105.201.11",
+        "slot": "0",
+        "cycletime": "500",
+        "name": "Valpo_Cell1_PLC",
+        "vartable": {
+            "": {
+                "MDT.NOCYCLESEG": {
+                    "type": "INT"
+                }
+            }
+        }
+    },
+    {
+        "id": "ddafc5db8cda04ac",
+        "type": "eth-ip endpoint",
+        "address": "10.105.205.11",
+        "slot": "0",
+        "cycletime": "500",
+        "name": "Valpo_Cell5_PLC",
+        "vartable": {
+            "": {
+                "MDT.NOCYCLESEG": {
+                    "type": "INT"
+                }
+            }
+        }
+    },
+    {
+        "id": "35af137d2fb85cdd",
+        "type": "influxdb",
+        "hostname": "luppa_influxdb",
+        "port": "%%influxdb_port_1%%",
+        "protocol": "http",
+        "database": "database",
+        "name": "InfluxDB_2",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://host.docker.internal:%%influxdb_port_1%%",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "af0badc3544177dd",
+        "type": "influxdb out",
+        "z": "aacefaff3199a845",
+        "influxdb": "ef97453886e2bb69",
+        "name": "Silao_InfluxDB",
+        "measurement": "Silao",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "luppa",
+        "bucket": "demo",
+        "x": 740,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "914da22d7c8740ad",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "5fa771957ee43c7c",
+        "mode": "single",
+        "variable": "sel",
+        "program": "",
+        "name": "Cell1_Connector",
+        "x": 100,
+        "y": 280,
+        "wires": [
+            [
+                "4097ddee4de764fc"
+            ]
+        ]
+    },
+    {
+        "id": "4097ddee4de764fc",
+        "type": "function",
+        "z": "aacefaff3199a845",
+        "name": "Cell1 Converter",
+        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        cell:1,\n        type:\"Press\",\n        device:\"PLC\",\n        group:\"Mudguard\"\n    }\n]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "af0badc3544177dd"
+            ]
+        ]
+    },
+    {
+        "id": "d8226263c9b00436",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "da81d030bcd2bc56",
+        "mode": "all-split",
+        "variable": "",
+        "program": "",
+        "name": "Cell22_Connector",
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "96bc297213bf1e83"
+            ]
+        ]
+    },
+    {
+        "id": "96bc297213bf1e83",
+        "type": "function",
+        "z": "aacefaff3199a845",
+        "name": "Cell22 Converter",
+        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        cell:22,\n        type:\"Press\",\n        device:\"PLC\",\n        model:msg.topic,\n        group:\"IFP\"\n    }\n]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "af0badc3544177dd"
+            ]
+        ]
+    },
+    {
+        "id": "2d1efd8dffd5b889",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "ddafc5db8cda04ac",
+        "mode": "single",
+        "variable": "MDT.NOCYCLESEG",
+        "program": "",
+        "name": "Cell5_Connector",
+        "x": 100,
+        "y": 360,
+        "wires": [
+            [
+                "ddbb15d91eed2d02"
+            ]
+        ]
+    },
+    {
+        "id": "ddbb15d91eed2d02",
+        "type": "function",
+        "z": "aacefaff3199a845",
+        "name": "Valpo Cell1 Converter",
+        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        cell:5,\n        type:\"Press\",\n        device:\"PLC\",\n        group:\"R&D\"\n    }\n]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "d49b531e99b810eb"
+            ]
+        ]
+    },
+    {
+        "id": "d49b531e99b810eb",
+        "type": "influxdb out",
+        "z": "aacefaff3199a845",
+        "influxdb": "ef97453886e2bb69",
+        "name": "Valpo_InfluxDB",
+        "measurement": "Valpo",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "luppa",
+        "bucket": "demo",
+        "x": 740,
+        "y": 320,
+        "wires": []
+    }
+]
