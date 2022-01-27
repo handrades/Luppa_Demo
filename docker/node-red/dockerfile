@@ -1,5 +1,6 @@
 FROM nodered/node-red:latest
 USER root
-RUN npm install node-red-contrib-cip-ethernet-ip
 RUN npm install node-red-contrib-influxdb
+RUN npm install node-red-contrib-cip-ethernet-ip
+RUN npm install node-red-contrib-pccc
 USER node-red

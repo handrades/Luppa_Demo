@@ -534,7 +534,149 @@
     )
     PLCs = @(
         @{
-            Cell = 22
+            Cell = '1'
+            IP = '10.107.201.11'
+            Site = 'Silao'
+            Tag= @(
+                'sup_name'
+                'Current_recipe_name'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
+            )
+        }
+        @{
+            Cell = '1'
+            IP = '10.107.12.217'
+            Site = 'Silao'
+            Tag= @(
+                #Left
+                'MES.AIP_CNT[0]'
+                'MES.CNT[0].ACC'
+                'MES.ID[0]'
+                #Right
+                'MES.AIP_CNT[1]'
+                'MES.CNT[1].ACC'
+                'MES.ID[1]'
+            )
+        }
+        @{
+            Cell = '1'
+            IP = '10.107.12.251'
+            Site = 'Silao'
+            Tag= @(
+                #Left
+                'MES.AIP_CNT[0]'
+                'MES.CNT[0].ACC'
+                'MES.ID[0]'
+                #Right
+                'MES.AIP_CNT[1]'
+                'MES.CNT[1].ACC'
+                'MES.ID[1]'
+            )
+        }
+        @{
+            Cell = '1'
+            IP = '10.107.12.250'
+            Site = 'Silao'
+            Tag= @(
+                #Left
+                'N7:132'
+                'C5:100.ACC'
+                'N7:120'
+                #Right
+                'N7:142'
+                'C5:101.ACC'
+                'N7:121'
+            )
+        }
+        @{
+            Cell = '1'
+            IP = '10.107.12.248'
+            Site = 'Silao'
+            Tag= @(
+                #Left
+                'N7:132'
+                'C5:100.ACC'
+                'N7:120'
+            )
+        }
+        @{
+            Cell = '1'
+            IP = '10.107.12.153'
+            Site = 'Silao'
+            Tag= @(
+                #Left
+                'N7:132'
+                'C5:100.ACC'
+                'N7:120'
+            )
+        }
+        @{
+            Cell = '1'
+            IP = '10.107.12.151'
+            Site = 'Silao'
+            Tag= @(
+                #Right
+                'N7:132'
+                'C5:100.ACC'
+                'N7:120'
+            )
+        }
+        @{
+            Cell = '2'
+            IP = '10.107.202.11'
+            Site = 'Silao'
+            Tag= @(
+                'ST41:0'
+                'N7:25'
+                'N73:0'
+            )
+        }
+        @{
+            Cell = '4'
+            IP = '10.107.204.11'
+            Site = 'Silao'
+            Tag= @(
+                'sup_name'
+                'Current_recipe_name'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
+            )
+        }
+        @{
+            Cell = '11'
+            IP = '10.107.211.13'
+            Site = 'Silao'
+            Tag= @(
+                'sup_name'
+                'recipe_working.recipe_name'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
+            )
+        }
+        @{
+            Cell = '12'
+            IP = '10.107.212.11'
+            Site = 'Silao'
+            Tag= @(
+                'current_recipe'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
+            )
+        }
+        @{
+            Cell = '21'
+            IP = '10.107.221.11'
+            Site = 'Silao'
+            Tag= @(
+                'sup_name'
+                'Current_recipe'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
+            )
+        }
+        @{
+            Cell = '22'
             IP = '10.107.222.11'
             Site = 'Silao'
             Tag= @(
@@ -553,10 +695,43 @@
                 'CX3_State'
                 'InfinityQx50_State'
                 'Mazda3_BDTS_State'
+                'Current_recipe'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
             )
         }
         @{
-            Cell = 31
+            Cell = '26'
+            IP = '10.107.226.11'
+            Site = 'Silao'
+            Tag= @(
+                'sup_name'
+                'Current_recipe'
+                'NOCYCLEMIN'
+            )
+        }
+        @{
+            Cell = '26A'
+            IP = '10.107.226.17'
+            Description = 'LH'
+            Site = 'Silao'
+            Tag= @(
+                'STATUS_STATES'
+                'NOCYCLEMIN'
+            )
+        }
+        @{
+            Cell = '26A'
+            IP = '10.107.226.18'
+            Site = 'Silao'
+            Description = 'RH'
+            Tag= @(
+                'NOCYCLEMIN'
+                'STATUS_STATES'
+            )
+        }
+        @{
+            Cell = '31'
             IP = '10.107.231.11'
             Site = 'Silao'
             Tag= @(
@@ -598,10 +773,25 @@
                 'OUTER_P02F_Status'
                 'HOOD_P02F_Status'
                 'MAZDA3_COVER_Status'
+                'sup_name'
+                'recipe_working.recipe_name'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
             )
         }
         @{
-            Cell = 33
+            Cell = '32'
+            IP = '10.107.232.11'
+            Site = 'Silao'
+            Tag= @(
+                'sup_name'
+                'Current_recipe'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
+            )
+        }
+        @{
+            Cell = '33'
             IP = '10.107.233.11'
             Site = 'Silao'
             Tag= @(
@@ -620,10 +810,25 @@
                 'M3_J59W_WHEEL_Status'
                 'OUTER_J59W_Status'
                 'J59W_HOOD_Status'
+                'sup_name'
+                'Current_recipe'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
             )
         }
         @{
-            Cell = 41
+            Cell = '41A'
+            IP = '10.107.241.13'
+            Site = 'Silao'
+            Tag= @(
+                'sup_name'
+                'Current_recipe'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
+            )
+        }
+        @{
+            Cell = '41'
             IP = '10.107.241.16'
             Site = 'Silao'
             Tag= @(
@@ -638,7 +843,18 @@
             )
         }
         @{
-            Cell = 42
+            Cell = '41'
+            IP = '10.107.241.17'
+            Site = 'Silao'
+            Tag= @(
+                'sup_name'
+                'Current_recipe'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
+            )
+        }
+        @{
+            Cell = '42'
             IP = '10.107.242.14'
             Site = 'Silao'
             Tag= @(
@@ -652,7 +868,28 @@
             )
         }
         @{
-            Cell = 43
+            Cell = '42'
+            IP = '10.107.242.15'
+            Site = 'Silao'
+            Tag= @(
+                'sup_name'
+                'Current_recipe'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
+            )
+        }
+        @{
+            Cell = '43A'
+            IP = '10.107.243.12'
+            Site = 'Silao'
+            Tag= @(
+                'Current_recipe'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
+            )
+        }
+        @{
+            Cell = '43'
             IP = '10.107.243.14'
             Site = 'Silao'
             Tag= @(
@@ -665,6 +902,17 @@
                 'WORK_ORDER_QTY_MZ3WINGS'
                 'SUMA_MODELO_MZ3WINGS'
                 'MZ3WINGS_Status'
+            )
+        }
+        @{
+            Cell = '43'
+            IP = '10.107.243.15'
+            Site = 'Silao'
+            Tag= @(
+                'sup_name'
+                'Current_recipe'
+                'NOCYCLEMIN'
+                'STATUS_STATES'
             )
         }
         @{

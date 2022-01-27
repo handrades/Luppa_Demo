@@ -2,24 +2,9 @@
     {
         "id": "aacefaff3199a845",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Linea 1",
         "disabled": false,
         "info": ""
-    },
-    {
-        "id": "5fa771957ee43c7c",
-        "type": "eth-ip endpoint",
-        "address": "10.107.201.11",
-        "slot": "0",
-        "cycletime": "500",
-        "name": "Cell1_Connector",
-        "vartable": {
-            "": {
-                "sel": {
-                    "type": "DINT"
-                }
-            }
-        }
     },
     {
         "id": "ef97453886e2bb69",
@@ -36,105 +21,296 @@
         "rejectUnauthorized": true
     },
     {
-        "id": "da81d030bcd2bc56",
+        "id": "b6e9290f9ddf2b38",
         "type": "eth-ip endpoint",
-        "address": "10.107.222.11",
+        "address": "10.107.201.11",
         "slot": "0",
         "cycletime": "500",
-        "name": "Cell22_Connector",
+        "name": "Silao_Cell1_201-11_Press",
         "vartable": {
             "": {
-                "SET_WORK_ORDER_QTY_2XP": {
-                    "type": "DINT"
-                },
-                "SUMA_MODELO_2XP_XS_UNDERBODY": {
-                    "type": "DINT"
-                },
-                "SET_WORK_ORDER_QTY_FIT": {
-                    "type": "DINT"
-                },
-                "SUMA_MODELO_FIT": {
-                    "type": "DINT"
-                },
-                "SUMA_MODELO_CX3": {
-                    "type": "DINT"
-                },
-                "WORK_ORDER_QTY_CX3": {
-                    "type": "DINT"
-                },
-                "SET_WORK_ORDER_QTY_INFINITI_QX50_19": {
-                    "type": "DINT"
-                },
-                "SUMA_MODELO_INFINITI_QX50_19": {
-                    "type": "DINT"
-                },
-                "SET_WORK_ORDER_QTY_MAZDA3_BDTS": {
-                    "type": "DINT"
-                },
-                "SUMA_MODELO_MAZDA3_BDTS": {
-                    "type": "DINT"
-                },
-                "FIT_State": {
-                    "type": "DINT"
-                },
-                "Under2xp_State": {
-                    "type": "DINT"
-                },
-                "CX3_State": {
-                    "type": "DINT"
-                },
-                "InfinityQx50_State": {
-                    "type": "DINT"
-                },
-                "Mazda3_BDTS_State": {
+                "NOCYCLEMIN": {
                     "type": "DINT"
                 }
             }
         }
     },
     {
-        "id": "ee8426cbef7da6e7",
+        "id": "2d8bddd3e0257bba",
         "type": "eth-ip endpoint",
-        "address": "10.105.201.11",
+        "address": "10.107.12.251",
         "slot": "0",
         "cycletime": "500",
-        "name": "Valpo_Cell1_PLC",
+        "name": "Silao_Cell1_12-251",
         "vartable": {
             "": {
-                "MDT.NOCYCLESEG": {
-                    "type": "INT"
+                "MES.AIP_CNT[1]": {
+                    "type": "DINT"
+                },
+                "MES.CNT[1].ACC": {
+                    "type": "DINT"
+                },
+                "MES.ID[1]": {
+                    "type": "DINT"
+                },
+                "MES.AIP_CNT[0]": {
+                    "type": "DINT"
+                },
+                "MES.CNT[0].ACC": {
+                    "type": "DINT"
+                },
+                "MES.ID[0]": {
+                    "type": "DINT"
                 }
             }
         }
     },
     {
-        "id": "ddafc5db8cda04ac",
+        "id": "6c2147d004ef0376",
         "type": "eth-ip endpoint",
-        "address": "10.105.205.11",
+        "address": "10.107.12.250",
         "slot": "0",
         "cycletime": "500",
-        "name": "Valpo_Cell5_PLC",
+        "name": "Silao_Cell1_12-250",
         "vartable": {
             "": {
-                "MDT.NOCYCLESEG": {
-                    "type": "INT"
+                "N7:142": {
+                    "type": "DINT"
+                },
+                "C5:101.ACC": {
+                    "type": "DINT"
+                },
+                "N7:121": {
+                    "type": "DINT"
+                },
+                "N7:132": {
+                    "type": "DINT"
+                },
+                "C5:100.ACC": {
+                    "type": "DINT"
+                },
+                "N7:120": {
+                    "type": "DINT"
                 }
             }
         }
     },
     {
-        "id": "35af137d2fb85cdd",
-        "type": "influxdb",
-        "hostname": "luppa_influxdb",
-        "port": "%%influxdb_port_1%%",
-        "protocol": "http",
-        "database": "database",
-        "name": "InfluxDB_2",
-        "usetls": false,
-        "tls": "",
-        "influxdbVersion": "2.0",
-        "url": "http://host.docker.internal:%%influxdb_port_1%%",
-        "rejectUnauthorized": true
+        "id": "674e5c3f0e2618b5",
+        "type": "eth-ip endpoint",
+        "address": "10.107.12.248",
+        "slot": "0",
+        "cycletime": "500",
+        "name": "Silao_Cell1_12-248",
+        "vartable": {
+            "": {
+                "N7:132": {
+                    "type": "DINT"
+                },
+                "C5:100.ACC": {
+                    "type": "DINT"
+                },
+                "N7:120": {
+                    "type": "DINT"
+                }
+            }
+        }
+    },
+    {
+        "id": "b2f7e41a7fcaa158",
+        "type": "eth-ip endpoint",
+        "address": "10.107.12.153",
+        "slot": "0",
+        "cycletime": "500",
+        "name": "Silao_Cell1_12-153",
+        "vartable": {
+            "": {
+                "N7:132": {
+                    "type": "DINT"
+                },
+                "C5:100.ACC": {
+                    "type": "DINT"
+                },
+                "N7:120": {
+                    "type": "DINT"
+                }
+            }
+        }
+    },
+    {
+        "id": "e44de957963f1cc3",
+        "type": "eth-ip endpoint",
+        "address": "10.107.12.151",
+        "slot": "0",
+        "cycletime": "500",
+        "name": "Silao_Cell1_12-151",
+        "vartable": {
+            "": {
+                "N7:132": {
+                    "type": "DINT"
+                },
+                "C5:100.ACC": {
+                    "type": "DINT"
+                },
+                "N7:120": {
+                    "type": "DINT"
+                }
+            }
+        }
+    },
+    {
+        "id": "5d95cdb320c4686a",
+        "type": "eth-ip endpoint",
+        "address": "10.107.12.217",
+        "slot": "0",
+        "cycletime": "500",
+        "name": "Silao_Cell1_12-217",
+        "vartable": {
+            "": {
+                "MES.AIP_CNT[1]": {
+                    "type": "DINT"
+                },
+                "MES.CNT[1].ACC": {
+                    "type": "DINT"
+                },
+                "MES.ID[1]": {
+                    "type": "DINT"
+                },
+                "MES.AIP_CNT[0]": {
+                    "type": "DINT"
+                },
+                "MES.CNT[0].ACC": {
+                    "type": "DINT"
+                },
+                "MES.ID[0]": {
+                    "type": "DINT"
+                }
+            }
+        }
+    },
+    {
+        "id": "ce7527091d6db699",
+        "type": "pccc endpoint",
+        "address": "10.107.12.250",
+        "port": "44818",
+        "userouting": false,
+        "routingbuf": "[1,0]",
+        "cycletime": "500",
+        "timeout": "1500",
+        "name": "Silao_Cell1_12-250",
+        "vartable": [
+            {
+                "addr": "N7:142",
+                "name": "SPQ_RH"
+            },
+            {
+                "addr": "C5:101.ACC",
+                "name": "TotalParts_RH"
+            },
+            {
+                "addr": "N7:121",
+                "name": "ID_RH"
+            },
+            {
+                "addr": "N7:132",
+                "name": "SPQ_LH"
+            },
+            {
+                "addr": "C5:100.ACC",
+                "name": "TotalParts_LH"
+            },
+            {
+                "addr": "N7:120",
+                "name": "ID_LH"
+            }
+        ]
+    },
+    {
+        "id": "4ceaf85428573720",
+        "type": "pccc endpoint",
+        "address": "10.107.12.151",
+        "port": "44818",
+        "userouting": false,
+        "routingbuf": "[1,0]",
+        "cycletime": "500",
+        "timeout": "1500",
+        "name": "Silao_Cell1_12-151",
+        "vartable": [
+            {
+                "addr": "N7:142",
+                "name": "SPQ_RH"
+            },
+            {
+                "addr": "C5:101.ACC",
+                "name": "TotalParts_RH"
+            },
+            {
+                "addr": "N7:121",
+                "name": "ID_RH"
+            },
+            {
+                "addr": "N7:132",
+                "name": "SPQ_LH"
+            },
+            {
+                "addr": "C5:100.ACC",
+                "name": "TotalParts_LH"
+            },
+            {
+                "addr": "N7:120",
+                "name": "ID_LH"
+            }
+        ]
+    },
+    {
+        "id": "4fa56c4bab11105b",
+        "type": "pccc endpoint",
+        "address": "10.107.12.153",
+        "port": "44818",
+        "userouting": false,
+        "routingbuf": "[1,0]",
+        "cycletime": "500",
+        "timeout": "1500",
+        "name": "Silao_Cell1_12-153",
+        "vartable": [
+            {
+                "addr": "N7:132",
+                "name": "SPQ"
+            },
+            {
+                "addr": "C5:100.ACC",
+                "name": "TotalParts"
+            },
+            {
+                "addr": "N7:120",
+                "name": "ID"
+            }
+        ]
+    },
+    {
+        "id": "122e8cc83bbb24ed",
+        "type": "pccc endpoint",
+        "address": "10.107.12.248",
+        "port": "44818",
+        "userouting": false,
+        "routingbuf": "[1,0]",
+        "cycletime": "500",
+        "timeout": "1500",
+        "name": "Silao_Cell1_12-248",
+        "vartable": [
+            {
+                "addr": "N7:132",
+                "name": "SPQ"
+            },
+            {
+                "addr": "C5:100.ACC",
+                "name": "TotalParts"
+            },
+            {
+                "addr": "N7:120",
+                "name": "ID"
+            }
+        ]
     },
     {
         "id": "af0badc3544177dd",
@@ -150,57 +326,21 @@
         "retentionPolicyV18Flux": "",
         "org": "luppa",
         "bucket": "demo",
-        "x": 740,
-        "y": 220,
+        "x": 2020,
+        "y": 1020,
         "wires": []
     },
     {
         "id": "914da22d7c8740ad",
         "type": "eth-ip in",
         "z": "aacefaff3199a845",
-        "endpoint": "5fa771957ee43c7c",
-        "mode": "single",
-        "variable": "sel",
-        "program": "",
-        "name": "Cell1_Connector",
-        "x": 100,
-        "y": 280,
-        "wires": [
-            [
-                "4097ddee4de764fc"
-            ]
-        ]
-    },
-    {
-        "id": "4097ddee4de764fc",
-        "type": "function",
-        "z": "aacefaff3199a845",
-        "name": "Cell1 Converter",
-        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        cell:1,\n        type:\"Press\",\n        device:\"PLC\",\n        group:\"Mudguard\"\n    }\n]\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 300,
-        "y": 280,
-        "wires": [
-            [
-                "af0badc3544177dd"
-            ]
-        ]
-    },
-    {
-        "id": "d8226263c9b00436",
-        "type": "eth-ip in",
-        "z": "aacefaff3199a845",
-        "endpoint": "da81d030bcd2bc56",
+        "endpoint": "b6e9290f9ddf2b38",
         "mode": "all-split",
         "variable": "",
         "program": "",
-        "name": "Cell22_Connector",
-        "x": 110,
-        "y": 200,
+        "name": "Silao_Cell1_201-11_Press",
+        "x": 730,
+        "y": 1160,
         "wires": [
             [
                 "96bc297213bf1e83"
@@ -211,15 +351,15 @@
         "id": "96bc297213bf1e83",
         "type": "function",
         "z": "aacefaff3199a845",
-        "name": "Cell22 Converter",
-        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        cell:22,\n        type:\"Press\",\n        device:\"PLC\",\n        model:msg.topic,\n        group:\"IFP\"\n    }\n]\nreturn msg;",
+        "name": "MDT Cell 1",
+        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        cell:1,\n        type:\"Press\",\n        device:\"PLC\",\n        model:msg.topic,\n        group:\"Guardafangos\"\n    }\n]\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 200,
+        "x": 1270,
+        "y": 1160,
         "wires": [
             [
                 "af0badc3544177dd"
@@ -227,57 +367,576 @@
         ]
     },
     {
-        "id": "2d1efd8dffd5b889",
+        "id": "2b9bacb095127f03",
         "type": "eth-ip in",
         "z": "aacefaff3199a845",
-        "endpoint": "ddafc5db8cda04ac",
+        "endpoint": "2d8bddd3e0257bba",
         "mode": "single",
-        "variable": "MDT.NOCYCLESEG",
+        "variable": "MES.CNT[0].ACC",
         "program": "",
-        "name": "Cell5_Connector",
-        "x": 100,
-        "y": 360,
+        "name": "Silao_Cell1_12-251_PiezasTotales-LH",
+        "x": 750,
+        "y": 1540,
         "wires": [
             [
-                "ddbb15d91eed2d02"
+                "6fc214d7f544a3e7"
             ]
         ]
     },
     {
-        "id": "ddbb15d91eed2d02",
+        "id": "d3ee3c713ab2928c",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "2d8bddd3e0257bba",
+        "mode": "single",
+        "variable": "MES.CNT[1].ACC",
+        "program": "",
+        "name": "Silao_Cell1_12-251_PiezasTotales-RH",
+        "x": 770,
+        "y": 440,
+        "wires": [
+            [
+                "b22b8e5a32ecdf73"
+            ]
+        ]
+    },
+    {
+        "id": "6fc214d7f544a3e7",
         "type": "function",
         "z": "aacefaff3199a845",
-        "name": "Valpo Cell1 Converter",
-        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        cell:5,\n        type:\"Press\",\n        device:\"PLC\",\n        group:\"R&D\"\n    }\n]\n\nreturn msg;",
+        "name": "Piezas Totales - Linea 1 - Izquierdo",
+        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        linea:1,\n        tipo:\"AssyTable\",\n        dispositivo:\"PLC\",\n        tag:msg.topic,\n        grupo:\"Guardafangos\",\n        lado:\"Izquierdo\",\n        descripcion:\"Piezas Totales\"\n    }\n]\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 360,
+        "x": 1280,
+        "y": 1420,
         "wires": [
             [
-                "d49b531e99b810eb"
+                "af0badc3544177dd"
             ]
         ]
     },
     {
-        "id": "d49b531e99b810eb",
-        "type": "influxdb out",
+        "id": "b22b8e5a32ecdf73",
+        "type": "function",
         "z": "aacefaff3199a845",
-        "influxdb": "ef97453886e2bb69",
-        "name": "Valpo_InfluxDB",
-        "measurement": "Valpo",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "luppa",
-        "bucket": "demo",
-        "x": 740,
+        "name": "Piezas Totales - Linea 1 - Derecho",
+        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        linea:1,\n        tipo:\"AssyTable\",\n        dispositivo:\"PLC\",\n        tag:msg.topic,\n        grupo:\"Guardafangos\",\n        lado:\"Derecho\",\n        descripcion:\"Piezas Totales\"\n    }\n]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 360,
+        "wires": [
+            [
+                "af0badc3544177dd"
+            ]
+        ]
+    },
+    {
+        "id": "07464fb82c978966",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "5d95cdb320c4686a",
+        "mode": "single",
+        "variable": "MES.CNT[0].ACC",
+        "program": "",
+        "name": "Silao_Cell1_12-217_PiezasTotales-LH",
+        "x": 750,
+        "y": 1360,
+        "wires": [
+            [
+                "6fc214d7f544a3e7"
+            ]
+        ]
+    },
+    {
+        "id": "bbbed156029f6a9e",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "5d95cdb320c4686a",
+        "mode": "single",
+        "variable": "MES.CNT[1].ACC",
+        "program": "",
+        "name": "Silao_Cell1_12-217_PiezasTotales-RH",
+        "x": 770,
         "y": 320,
-        "wires": []
+        "wires": [
+            [
+                "b22b8e5a32ecdf73"
+            ]
+        ]
+    },
+    {
+        "id": "e64ff517a9f934de",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "2d8bddd3e0257bba",
+        "mode": "single",
+        "variable": "MES.AIP_CNT[1]",
+        "program": "",
+        "name": "Silao_Cell1_12-251_SPQ-RH",
+        "x": 740,
+        "y": 740,
+        "wires": [
+            [
+                "2af9ed1d9b1a6026"
+            ]
+        ]
+    },
+    {
+        "id": "2af9ed1d9b1a6026",
+        "type": "function",
+        "z": "aacefaff3199a845",
+        "name": "SPQ - Linea 1 - Derecho",
+        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        linea:1,\n        tipo:\"AssyTable\",\n        dispositivo:\"PLC\",\n        tag:msg.topic,\n        grupo:\"Guardafangos\",\n        lado:\"Derecho\",\n        descripcion:\"SPQ\"\n    }\n]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 660,
+        "wires": [
+            [
+                "af0badc3544177dd"
+            ]
+        ]
+    },
+    {
+        "id": "4af1152aa907f912",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "5d95cdb320c4686a",
+        "mode": "single",
+        "variable": "MES.AIP_CNT[1]",
+        "program": "",
+        "name": "Silao_Cell1_12-217_SPQ-RH",
+        "x": 740,
+        "y": 620,
+        "wires": [
+            [
+                "2af9ed1d9b1a6026"
+            ]
+        ]
+    },
+    {
+        "id": "d949667d083ff848",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "2d8bddd3e0257bba",
+        "mode": "single",
+        "variable": "MES.AIP_CNT[0]",
+        "program": "",
+        "name": "Silao_Cell1_12-251_SPQ-LH",
+        "x": 720,
+        "y": 1880,
+        "wires": [
+            [
+                "5f5c25ccd4d03824"
+            ]
+        ]
+    },
+    {
+        "id": "5f5c25ccd4d03824",
+        "type": "function",
+        "z": "aacefaff3199a845",
+        "name": "SPQ - Linea 1 - Izquierdo",
+        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        linea:1,\n        tipo:\"AssyTable\",\n        dispositivo:\"PLC\",\n        tag:msg.topic,\n        grupo:\"Guardafangos\",\n        lado:\"Izquierdo\",\n        descripcion:\"SPQ\"\n    }\n]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 1760,
+        "wires": [
+            [
+                "af0badc3544177dd"
+            ]
+        ]
+    },
+    {
+        "id": "1c6c795f90762310",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "5d95cdb320c4686a",
+        "mode": "single",
+        "variable": "MES.AIP_CNT[0]",
+        "program": "",
+        "name": "Silao_Cell1_12-217_SPQ-LH",
+        "x": 720,
+        "y": 1700,
+        "wires": [
+            [
+                "5f5c25ccd4d03824"
+            ]
+        ]
+    },
+    {
+        "id": "7ccf7103055a32bb",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "2d8bddd3e0257bba",
+        "mode": "single",
+        "variable": "MES.ID[1]",
+        "program": "",
+        "name": "Silao_Cell1_12-251_ID-RH",
+        "x": 730,
+        "y": 1040,
+        "wires": [
+            [
+                "c78d68352bd24e57"
+            ]
+        ]
+    },
+    {
+        "id": "c78d68352bd24e57",
+        "type": "function",
+        "z": "aacefaff3199a845",
+        "name": "ID - Linea 1 - Derecho",
+        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        linea:1,\n        tipo:\"AssyTable\",\n        dispositivo:\"PLC\",\n        tag:msg.topic,\n        grupo:\"Guardafangos\",\n        lado:\"Derecho\",\n        descripcion:\"ID\"\n    }\n]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 960,
+        "wires": [
+            [
+                "af0badc3544177dd"
+            ]
+        ]
+    },
+    {
+        "id": "eb4eed164ffd497b",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "5d95cdb320c4686a",
+        "mode": "single",
+        "variable": "MES.ID[1]",
+        "program": "",
+        "name": "Silao_Cell1_12-217_ID-RH",
+        "x": 730,
+        "y": 920,
+        "wires": [
+            [
+                "c78d68352bd24e57"
+            ]
+        ]
+    },
+    {
+        "id": "78b0e269718a2039",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "2d8bddd3e0257bba",
+        "mode": "single",
+        "variable": "MES.ID[0]",
+        "program": "",
+        "name": "Silao_Cell1_12-251_ID-LH",
+        "x": 710,
+        "y": 2220,
+        "wires": [
+            [
+                "92beffde23c4c8a5"
+            ]
+        ]
+    },
+    {
+        "id": "92beffde23c4c8a5",
+        "type": "function",
+        "z": "aacefaff3199a845",
+        "name": "ID - Linea 1 - Izquierdo",
+        "func": "msg.payload = [\n    {\n        data: msg.payload\n    },\n    {\n        linea:1,\n        tipo:\"AssyTable\",\n        dispositivo:\"PLC\",\n        tag:msg.topic,\n        grupo:\"Guardafangos\",\n        lado:\"Izquierdo\",\n        descripcion:\"ID\"\n    }\n]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 2100,
+        "wires": [
+            [
+                "af0badc3544177dd"
+            ]
+        ]
+    },
+    {
+        "id": "81fef1d8f5b613db",
+        "type": "eth-ip in",
+        "z": "aacefaff3199a845",
+        "endpoint": "5d95cdb320c4686a",
+        "mode": "single",
+        "variable": "MES.ID[0]",
+        "program": "",
+        "name": "Silao_Cell1_12-217_ID-LH",
+        "x": 710,
+        "y": 2040,
+        "wires": [
+            [
+                "92beffde23c4c8a5"
+            ]
+        ]
+    },
+    {
+        "id": "f7bf1e85b8396b20",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "ce7527091d6db699",
+        "mode": "single",
+        "variable": "TotalParts_RH",
+        "diff": true,
+        "name": "Silao_Cell1_12-250_PiezasTotales-RH",
+        "x": 770,
+        "y": 380,
+        "wires": [
+            [
+                "b22b8e5a32ecdf73"
+            ]
+        ]
+    },
+    {
+        "id": "567f0adaa85cc13b",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "4ceaf85428573720",
+        "mode": "single",
+        "variable": "TotalParts_RH",
+        "diff": true,
+        "name": "Silao_Cell1_12-151_PiezasTotales-RH",
+        "x": 770,
+        "y": 260,
+        "wires": [
+            [
+                "b22b8e5a32ecdf73"
+            ]
+        ]
+    },
+    {
+        "id": "019f20549219b3e3",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "4ceaf85428573720",
+        "mode": "single",
+        "variable": "SPQ_RH",
+        "diff": true,
+        "name": "Silao_Cell1_12-151_SPQ-RH",
+        "x": 740,
+        "y": 560,
+        "wires": [
+            [
+                "2af9ed1d9b1a6026"
+            ]
+        ]
+    },
+    {
+        "id": "ce44bb5fcd14b76e",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "ce7527091d6db699",
+        "mode": "single",
+        "variable": "SPQ_RH",
+        "diff": true,
+        "name": "Silao_Cell1_12-250_SPQ-RH",
+        "x": 740,
+        "y": 680,
+        "wires": [
+            [
+                "2af9ed1d9b1a6026"
+            ]
+        ]
+    },
+    {
+        "id": "b83c484c242d0a1d",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "4ceaf85428573720",
+        "mode": "single",
+        "variable": "ID_RH",
+        "diff": true,
+        "name": "Silao_Cell1_12-151_ID-RH",
+        "x": 730,
+        "y": 860,
+        "wires": [
+            [
+                "c78d68352bd24e57"
+            ]
+        ]
+    },
+    {
+        "id": "b037094b30cd900f",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "ce7527091d6db699",
+        "mode": "single",
+        "variable": "ID_RH",
+        "diff": true,
+        "name": "Silao_Cell1_12-250_ID-RH",
+        "x": 730,
+        "y": 980,
+        "wires": [
+            [
+                "c78d68352bd24e57"
+            ]
+        ]
+    },
+    {
+        "id": "69b2ef928d3a13ee",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "4fa56c4bab11105b",
+        "mode": "single",
+        "variable": "TotalParts",
+        "diff": true,
+        "name": "Silao_Cell1_12-153_PiezasTotales-LH",
+        "x": 750,
+        "y": 1300,
+        "wires": [
+            [
+                "6fc214d7f544a3e7"
+            ]
+        ]
+    },
+    {
+        "id": "2310e4cc1448f1de",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "122e8cc83bbb24ed",
+        "mode": "single",
+        "variable": "TotalParts",
+        "diff": true,
+        "name": "Silao_Cell1_12-248_PiezasTotales-LH",
+        "x": 750,
+        "y": 1420,
+        "wires": [
+            [
+                "6fc214d7f544a3e7"
+            ]
+        ]
+    },
+    {
+        "id": "a15534f566a21c03",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "ce7527091d6db699",
+        "mode": "single",
+        "variable": "TotalParts_LH",
+        "diff": true,
+        "name": "Silao_Cell1_12-250_PiezasTotales-LH",
+        "x": 750,
+        "y": 1480,
+        "wires": [
+            [
+                "6fc214d7f544a3e7"
+            ]
+        ]
+    },
+    {
+        "id": "0194484d0a1de610",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "4fa56c4bab11105b",
+        "mode": "single",
+        "variable": "SPQ",
+        "diff": true,
+        "name": "Silao_Cell1_12-153_SPQ-LH",
+        "x": 720,
+        "y": 1640,
+        "wires": [
+            [
+                "5f5c25ccd4d03824"
+            ]
+        ]
+    },
+    {
+        "id": "80dac7ba39a0607d",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "122e8cc83bbb24ed",
+        "mode": "single",
+        "variable": "SPQ",
+        "diff": true,
+        "name": "Silao_Cell1_12-248_SPQ-LH",
+        "x": 720,
+        "y": 1760,
+        "wires": [
+            [
+                "5f5c25ccd4d03824"
+            ]
+        ]
+    },
+    {
+        "id": "0069e5b7b0b9b97d",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "ce7527091d6db699",
+        "mode": "single",
+        "variable": "SPQ_LH",
+        "diff": true,
+        "name": "Silao_Cell1_12-250_SPQ-LH",
+        "x": 720,
+        "y": 1820,
+        "wires": [
+            [
+                "5f5c25ccd4d03824"
+            ]
+        ]
+    },
+    {
+        "id": "b660a1abdbba2729",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "4fa56c4bab11105b",
+        "mode": "single",
+        "variable": "ID",
+        "diff": true,
+        "name": "Silao_Cell1_12-153_ID-LH",
+        "x": 710,
+        "y": 1980,
+        "wires": [
+            [
+                "92beffde23c4c8a5"
+            ]
+        ]
+    },
+    {
+        "id": "d52dd3e0cd186114",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "122e8cc83bbb24ed",
+        "mode": "single",
+        "variable": "ID",
+        "diff": true,
+        "name": "Silao_Cell1_12-248_ID-LH",
+        "x": 710,
+        "y": 2100,
+        "wires": [
+            [
+                "92beffde23c4c8a5"
+            ]
+        ]
+    },
+    {
+        "id": "a0e941981ccabdf9",
+        "type": "pccc in",
+        "z": "aacefaff3199a845",
+        "endpoint": "ce7527091d6db699",
+        "mode": "single",
+        "variable": "ID_LH",
+        "diff": true,
+        "name": "Silao_Cell1_12-250_ID-LH",
+        "x": 710,
+        "y": 2160,
+        "wires": [
+            [
+                "92beffde23c4c8a5"
+            ]
+        ]
     }
 ]
